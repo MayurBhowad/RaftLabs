@@ -41,6 +41,7 @@ const AddRelation = () => {
                     </div>
                     {/* <input name="relation2" type="text" placeholder="Enter Relation" /> */}
                 </div>
+                <hr />
                 <div className={styles.personInput1}>
                     <div>
                         {/* <label disabled htmlFor="person1"></label> */}

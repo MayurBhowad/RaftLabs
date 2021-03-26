@@ -31,8 +31,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+// app.use('/', indexRouter);
 app.use('/person', personsRouter);
+process.env.NODE_ENV = 'production'
+//serve static assets if in Production
+if (process.env.NODE_ENV === 'production') {
+  //set static folder
+  app.use(express.static('nextjs/out'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'nextjs', 'out', 'index.html'));
+  });
+}
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

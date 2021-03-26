@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "next-install": "npm install --prefix nextjs",
-    "start": "node ./bin/www && npm run start",
+    "start": "node ./bin/www",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix nextjs && npm run build --prefix nextjs"
   },
   "dependencies": {

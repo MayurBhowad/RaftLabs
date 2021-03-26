@@ -24,7 +24,9 @@ const FindRelation = () => {
                     <input name="person2" type="text" placeholder="Enter person name" value={person2} onChange={e => setPerson2(e.target.value)} />
 
                 </div>
-                <input type="submit" value="Find" />
+                <div className={styles.submit}>
+                    <input type="submit" value="Find" />
+                </div>
             </form>
 
             <div className={styles.relationList}>
