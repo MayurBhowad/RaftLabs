@@ -19,6 +19,10 @@ const AddRelation = () => {
         }
         let resRelation = await AddRelationServer(newRelation);
         setResult(resRelation)
+        setPerson1('')
+        setPerson2('')
+        setRelation1('')
+        setRelation2('')
     }
 
     return (
