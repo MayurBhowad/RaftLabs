@@ -22,7 +22,9 @@ const AddRelation = () => {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
+            <p>e.g. X is Son of Y</p>
+            <p>e.g. Y is Father of X</p>
             <form onSubmit={onSubmit} className="form">
                 <div className={styles.personInput1}>
                     <div>
