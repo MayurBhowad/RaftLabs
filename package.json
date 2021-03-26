@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "next-install": "npm install --prefix nextjs",
+    "start": "node ./bin/www && npm run start",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix nextjs && npm run build --prefix nextjs"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
